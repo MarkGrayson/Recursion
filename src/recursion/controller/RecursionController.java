@@ -38,6 +38,19 @@ public class RecursionController
 		mathTimer.stopTimer();
 		factorialInfo += "\n" + mathTimer.toString();
 		
+		factorialInfo  += "The factorial of " + input + " is ";
+		mathTimer.resetTimer(); 
+		mathTimer.startTimer();
+		
+		if(isValid(input))
+		{
+			factorialInfo += mathTool.calculateIterativeFact(Integer.parseInt(input));
+		}
+		
+		mathTimer.stopTimer();
+		factorialInfo += "\n" + mathTimer.toString();
+		
+		
 		return factorialInfo;
 	}
 	
